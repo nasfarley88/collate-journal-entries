@@ -5,9 +5,10 @@ from time import strftime
 
 from subprocess import call
 import os
+from shutil import copyfile
 
 # filename string, always good to have!
-filename = "journal" + strftime("%FT%H%M%S") 
+filename = ".journal" + strftime("%FT%H%M%S") 
 
 # Open file ready for writing
 f = open(filename+".tex","w+")
@@ -26,6 +27,8 @@ middleOfFile = r"""I don't think the import worked \ldots"""
 f.write(beginningOfFile + middleOfFile + endOfFile)
 f.close()
 
-print "Attempting to run pdflatex"
+copyfile(filename+".tex","journal.tex")
 
-call(['pdflatex',filename])
+print "Attempting to run pdflatex on journal.tex"
+
+call(['pdflatex','journal.tex'])
