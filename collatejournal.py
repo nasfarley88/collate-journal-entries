@@ -8,16 +8,16 @@ import os
 filename = "journal" + strftime("%FT%H%M%S") + ".tex"
 
 # Open file ready for writing
-f = open("filename","w+")
+f = open(filename,"w+")
 
-beginningOfFile = """\documentclass{memoir}
+beginningOfFile = r"""\documentclass{memoir}
 
 \begin{document}"""
 
-endOfFile = """
+endOfFile = r"""
 \end{document}"""
 
-middleOfFile = """I don't think the import worked \ldots"""
+middleOfFile = r"""I don't think the import worked \ldots"""
 
 # TODO import the text files here
 
