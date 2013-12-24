@@ -8,7 +8,7 @@ import os
 filename = "journal" + strftime("%FT%H%M%S")
 
 # Open file ready for writing
-f.open("filename","w+")
+f = open("filename","w+")
 
 beginningOfFile = """\documentclass{memoir}
 
