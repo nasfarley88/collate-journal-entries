@@ -5,7 +5,7 @@ from time import strftime
 import os
 
 # filename string, always good to have!
-filename = "journal" + strftime("%FT%H%M%S")
+filename = "journal" + strftime("%FT%H%M%S") + ".tex"
 
 # Open file ready for writing
 f = open("filename","w+")
